@@ -3,6 +3,7 @@ from typing import List
 
 
 REQUIREMENT_FILE_NAME = "requirements.txt"
+HYPHEN_E_DOT = "-e ."
 
 def get_requirements()->List[str]:
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
