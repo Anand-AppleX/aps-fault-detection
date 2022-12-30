@@ -1,0 +1,44 @@
+[2022-12-29 11:46:28,442] 16 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-12-29 11:46:28,442] 24 root - INFO - Exporting collection data as pandas dataframe
+[2022-12-29 11:46:28,442] 20 root - INFO - Read data from database:aps and collection: sensor
+[2022-12-29 11:46:33,046] 22 root - INFO - Found columns: Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[2022-12-29 11:46:33,047] 26 root - INFO - Row and Columns in df: (36188, 172)
+[2022-12-29 11:46:33,047] 31 root - INFO - replace na with Nan
+[2022-12-29 11:46:33,835] 36 root - INFO - Create feature store folder if not available
+[2022-12-29 11:46:33,835] 41 root - INFO - save df to feature store folder
+[2022-12-29 11:46:36,523] 46 root - INFO - split dataset into train and test set.
+[2022-12-29 11:46:37,241] 50 root - INFO - create dataset directory folder if not avaiable
+[2022-12-29 11:46:37,242] 55 root - INFO - save df to feature store folder
+[2022-12-29 11:46:39,628] 66 root - INFO - Data ingestion artifact:DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/12-29-22__11:46:28/data_ingestion/feature_store/sensor.csv', train_file_path='/config/workspace/artifact/12-29-22__11:46:28/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/12-29-22__11:46:28/data_ingestion/dataset/test.csv')
+[2022-12-29 11:46:39,628] 67 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion is completed. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-12-29 11:46:40,124] 20 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-12-29 11:46:40,124] 118 root - INFO - reading base dataframe
+[2022-12-29 11:46:43,089] 121 root - INFO - Replace na value in base df
+[2022-12-29 11:46:43,089] 123 root - INFO - Drop null values columns from base df
+[2022-12-29 11:46:43,090] 44 root - INFO - droping_missing_values_columns in the dataframe df.
+[2022-12-29 11:46:44,072] 48 root - INFO - selecting columns names which contains null above to 0.7
+[2022-12-29 11:46:44,073] 51 root - INFO - droped columns are: Index(['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000'], dtype='object')
+[2022-12-29 11:46:44,176] 125 root - INFO - replacing na with np.nan and droping missing values columns
+[2022-12-29 11:46:44,176] 127 root - INFO - Reading train dataframe
+[2022-12-29 11:46:44,606] 129 root - INFO - Reading test dataframe
+[2022-12-29 11:46:44,714] 132 root - INFO - Drop null values columns from train df
+[2022-12-29 11:46:44,714] 44 root - INFO - droping_missing_values_columns in the dataframe df.
+[2022-12-29 11:46:44,731] 48 root - INFO - selecting columns names which contains null above to 0.7
+[2022-12-29 11:46:44,732] 51 root - INFO - droped columns are: Index(['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000'], dtype='object')
+[2022-12-29 11:46:44,742] 134 root - INFO - Drop null values columns from test df
+[2022-12-29 11:46:44,742] 44 root - INFO - droping_missing_values_columns in the dataframe df.
+[2022-12-29 11:46:44,748] 48 root - INFO - selecting columns names which contains null above to 0.7
+[2022-12-29 11:46:44,748] 51 root - INFO - droped columns are: Index(['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000'], dtype='object')
+[2022-12-29 11:46:44,751] 137 root - INFO - Is all required columns present in train df
+[2022-12-29 11:46:44,751] 67 root - INFO - is_required_columns_exists or not.
+[2022-12-29 11:46:44,751] 75 root - INFO - missing_columns are:[]
+[2022-12-29 11:46:44,751] 139 root - INFO - Is all required columns present in test df
+[2022-12-29 11:46:44,751] 67 root - INFO - is_required_columns_exists or not.
+[2022-12-29 11:46:44,752] 75 root - INFO - missing_columns are:[]
+[2022-12-29 11:46:44,752] 143 root - INFO - As all columns available in train df hence detecting data drift
+[2022-12-29 11:46:44,752] 94 root - INFO - Hypothesis class: object, object

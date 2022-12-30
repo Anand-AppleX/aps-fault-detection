@@ -1,0 +1,864 @@
+[2022-12-30 12:24:59,890] 16 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-12-30 12:24:59,890] 24 root - INFO - Exporting collection data as pandas dataframe
+[2022-12-30 12:24:59,890] 21 root - INFO - Read data from database:aps and collection: sensor
+[2022-12-30 12:25:03,379] 23 root - INFO - Found columns: Index(['_id', 'class', 'aa_000', 'ab_000', 'ac_000', 'ad_000', 'ae_000',
+       'af_000', 'ag_000', 'ag_001',
+       ...
+       'ee_002', 'ee_003', 'ee_004', 'ee_005', 'ee_006', 'ee_007', 'ee_008',
+       'ee_009', 'ef_000', 'eg_000'],
+      dtype='object', length=172)
+[2022-12-30 12:25:03,380] 25 root - INFO - Dropping column: _id
+[2022-12-30 12:25:03,655] 27 root - INFO - Row and Columns in df: (36188, 171)
+[2022-12-30 12:25:03,655] 31 root - INFO - replace na with Nan
+[2022-12-30 12:25:04,419] 36 root - INFO - Create feature store folder if not available
+[2022-12-30 12:25:04,419] 41 root - INFO - save df to feature store folder
+[2022-12-30 12:25:07,076] 46 root - INFO - split dataset into train and test set.
+[2022-12-30 12:25:07,780] 50 root - INFO - create dataset directory folder if not avaiable
+[2022-12-30 12:25:07,780] 55 root - INFO - save df to feature store folder
+[2022-12-30 12:25:10,051] 66 root - INFO - Data ingestion artifact:DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/12-30-22__12:24:59/data_ingestion/feature_store/sensor.csv', train_file_path='/config/workspace/artifact/12-30-22__12:24:59/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/12-30-22__12:24:59/data_ingestion/dataset/test.csv')
+[2022-12-30 12:25:10,051] 67 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion is completed. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-12-30 12:25:10,504] 20 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-12-30 12:25:10,505] 119 root - INFO - reading base dataframe
+[2022-12-30 12:25:13,553] 122 root - INFO - Replace na value in base df
+[2022-12-30 12:25:13,553] 124 root - INFO - Drop null values columns from base df
+[2022-12-30 12:25:13,553] 44 root - INFO - droping_missing_values_columns in the dataframe df.
+[2022-12-30 12:25:14,514] 48 root - INFO - selecting columns names which contains null above to 0.7
+[2022-12-30 12:25:14,515] 52 root - INFO - droped columns are: ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[2022-12-30 12:25:14,640] 126 root - INFO - replacing na with np.nan and droping missing values columns
+[2022-12-30 12:25:14,641] 128 root - INFO - Reading train dataframe
+[2022-12-30 12:25:15,031] 130 root - INFO - Reading test dataframe
+[2022-12-30 12:25:15,141] 133 root - INFO - Drop null values columns from train df
+[2022-12-30 12:25:15,141] 44 root - INFO - droping_missing_values_columns in the dataframe df.
+[2022-12-30 12:25:15,152] 48 root - INFO - selecting columns names which contains null above to 0.7
+[2022-12-30 12:25:15,153] 52 root - INFO - droped columns are: ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[2022-12-30 12:25:15,163] 135 root - INFO - Drop null values columns from test df
+[2022-12-30 12:25:15,163] 44 root - INFO - droping_missing_values_columns in the dataframe df.
+[2022-12-30 12:25:15,167] 48 root - INFO - selecting columns names which contains null above to 0.7
+[2022-12-30 12:25:15,167] 52 root - INFO - droped columns are: ['ab_000', 'bn_000', 'bo_000', 'bp_000', 'bq_000', 'br_000', 'cr_000']
+[2022-12-30 12:25:15,172] 49 root - INFO - succefully com3.aa_000
+[2022-12-30 12:25:15,266] 49 root - INFO - succefully com3.ac_000
+[2022-12-30 12:25:15,365] 49 root - INFO - succefully com3.ad_000
+[2022-12-30 12:25:15,453] 49 root - INFO - succefully com3.ae_000
+[2022-12-30 12:25:15,539] 49 root - INFO - succefully com3.af_000
+[2022-12-30 12:25:15,623] 49 root - INFO - succefully com3.ag_000
+[2022-12-30 12:25:15,708] 49 root - INFO - succefully com3.ag_001
+[2022-12-30 12:25:15,793] 49 root - INFO - succefully com3.ag_002
+[2022-12-30 12:25:15,879] 49 root - INFO - succefully com3.ag_003
+[2022-12-30 12:25:15,964] 49 root - INFO - succefully com3.ag_004
+[2022-12-30 12:25:16,049] 49 root - INFO - succefully com3.ag_005
+[2022-12-30 12:25:16,134] 49 root - INFO - succefully com3.ag_006
+[2022-12-30 12:25:16,221] 49 root - INFO - succefully com3.ag_007
+[2022-12-30 12:25:16,312] 49 root - INFO - succefully com3.ag_008
+[2022-12-30 12:25:16,405] 49 root - INFO - succefully com3.ag_009
+[2022-12-30 12:25:16,477] 49 root - INFO - succefully com3.ah_000
+[2022-12-30 12:25:16,553] 49 root - INFO - succefully com3.ai_000
+[2022-12-30 12:25:16,624] 49 root - INFO - succefully com3.aj_000
+[2022-12-30 12:25:16,699] 49 root - INFO - succefully com3.ak_000
+[2022-12-30 12:25:16,770] 49 root - INFO - succefully com3.al_000
+[2022-12-30 12:25:16,847] 49 root - INFO - succefully com3.am_0
+[2022-12-30 12:25:16,917] 49 root - INFO - succefully com3.an_000
+[2022-12-30 12:25:16,993] 49 root - INFO - succefully com3.ao_000
+[2022-12-30 12:25:17,062] 49 root - INFO - succefully com3.ap_000
+[2022-12-30 12:25:17,137] 49 root - INFO - succefully com3.aq_000
+[2022-12-30 12:25:17,203] 49 root - INFO - succefully com3.ar_000
+[2022-12-30 12:25:17,279] 49 root - INFO - succefully com3.as_000
+[2022-12-30 12:25:17,348] 49 root - INFO - succefully com3.at_000
+[2022-12-30 12:25:17,422] 49 root - INFO - succefully com3.au_000
+[2022-12-30 12:25:17,500] 49 root - INFO - succefully com3.av_000
+[2022-12-30 12:25:17,595] 49 root - INFO - succefully com3.ax_000
+[2022-12-30 12:25:17,659] 49 root - INFO - succefully com3.ay_000
+[2022-12-30 12:25:17,729] 49 root - INFO - succefully com3.ay_001
+[2022-12-30 12:25:17,793] 49 root - INFO - succefully com3.ay_002
+[2022-12-30 12:25:17,863] 49 root - INFO - succefully com3.ay_003
+[2022-12-30 12:25:17,925] 49 root - INFO - succefully com3.ay_004
+[2022-12-30 12:25:17,994] 49 root - INFO - succefully com3.ay_005
+[2022-12-30 12:25:18,058] 49 root - INFO - succefully com3.ay_006
+[2022-12-30 12:25:18,127] 49 root - INFO - succefully com3.ay_007
+[2022-12-30 12:25:18,189] 49 root - INFO - succefully com3.ay_008
+[2022-12-30 12:25:18,261] 49 root - INFO - succefully com3.ay_009
+[2022-12-30 12:25:18,328] 49 root - INFO - succefully com3.az_000
+[2022-12-30 12:25:18,395] 49 root - INFO - succefully com3.az_001
+[2022-12-30 12:25:18,456] 49 root - INFO - succefully com3.az_002
+[2022-12-30 12:25:18,522] 49 root - INFO - succefully com3.az_003
+[2022-12-30 12:25:18,586] 49 root - INFO - succefully com3.az_004
+[2022-12-30 12:25:18,659] 49 root - INFO - succefully com3.az_005
+[2022-12-30 12:25:18,717] 49 root - INFO - succefully com3.az_006
+[2022-12-30 12:25:18,780] 49 root - INFO - succefully com3.az_007
+[2022-12-30 12:25:18,837] 49 root - INFO - succefully com3.az_008
+[2022-12-30 12:25:18,897] 49 root - INFO - succefully com3.az_009
+[2022-12-30 12:25:18,951] 49 root - INFO - succefully com3.ba_000
+[2022-12-30 12:25:19,005] 49 root - INFO - succefully com3.ba_001
+[2022-12-30 12:25:19,059] 49 root - INFO - succefully com3.ba_002
+[2022-12-30 12:25:19,111] 49 root - INFO - succefully com3.ba_003
+[2022-12-30 12:25:19,164] 49 root - INFO - succefully com3.ba_004
+[2022-12-30 12:25:19,215] 49 root - INFO - succefully com3.ba_005
+[2022-12-30 12:25:19,266] 49 root - INFO - succefully com3.ba_006
+[2022-12-30 12:25:19,317] 49 root - INFO - succefully com3.ba_007
+[2022-12-30 12:25:19,367] 49 root - INFO - succefully com3.ba_008
+[2022-12-30 12:25:19,416] 49 root - INFO - succefully com3.ba_009
+[2022-12-30 12:25:19,466] 49 root - INFO - succefully com3.bb_000
+[2022-12-30 12:25:19,515] 49 root - INFO - succefully com3.bc_000
+[2022-12-30 12:25:19,564] 49 root - INFO - succefully com3.bd_000
+[2022-12-30 12:25:19,617] 49 root - INFO - succefully com3.be_000
+[2022-12-30 12:25:19,670] 49 root - INFO - succefully com3.bf_000
+[2022-12-30 12:25:19,718] 49 root - INFO - succefully com3.bg_000
+[2022-12-30 12:25:19,765] 49 root - INFO - succefully com3.bh_000
+[2022-12-30 12:25:19,812] 49 root - INFO - succefully com3.bi_000
+[2022-12-30 12:25:19,859] 49 root - INFO - succefully com3.bj_000
+[2022-12-30 12:25:19,903] 49 root - INFO - succefully com3.bk_000
+[2022-12-30 12:25:19,946] 49 root - INFO - succefully com3.bl_000
+[2022-12-30 12:25:20,000] 49 root - INFO - succefully com3.bm_000
+[2022-12-30 12:25:20,055] 49 root - INFO - succefully com3.bs_000
+[2022-12-30 12:25:20,099] 49 root - INFO - succefully com3.bt_000
+[2022-12-30 12:25:20,142] 49 root - INFO - succefully com3.bu_000
+[2022-12-30 12:25:20,184] 49 root - INFO - succefully com3.bv_000
+[2022-12-30 12:25:20,226] 49 root - INFO - succefully com3.bx_000
+[2022-12-30 12:25:20,267] 49 root - INFO - succefully com3.by_000
+[2022-12-30 12:25:20,308] 49 root - INFO - succefully com3.bz_000
+[2022-12-30 12:25:20,347] 49 root - INFO - succefully com3.ca_000
+[2022-12-30 12:25:20,386] 49 root - INFO - succefully com3.cb_000
+[2022-12-30 12:25:20,426] 49 root - INFO - succefully com3.cc_000
+[2022-12-30 12:25:20,471] 49 root - INFO - succefully com3.cd_000
+[2022-12-30 12:25:20,509] 49 root - INFO - succefully com3.ce_000
+[2022-12-30 12:25:20,545] 49 root - INFO - succefully com3.cf_000
+[2022-12-30 12:25:20,581] 49 root - INFO - succefully com3.cg_000
+[2022-12-30 12:25:20,619] 49 root - INFO - succefully com3.ch_000
+[2022-12-30 12:25:20,657] 49 root - INFO - succefully com3.ci_000
+[2022-12-30 12:25:20,692] 49 root - INFO - succefully com3.cj_000
+[2022-12-30 12:25:20,728] 49 root - INFO - succefully com3.ck_000
+[2022-12-30 12:25:20,764] 49 root - INFO - succefully com3.cl_000
+[2022-12-30 12:25:20,798] 49 root - INFO - succefully com3.cm_000
+[2022-12-30 12:25:20,832] 49 root - INFO - succefully com3.cn_000
+[2022-12-30 12:25:20,866] 49 root - INFO - succefully com3.cn_001
+[2022-12-30 12:25:20,904] 49 root - INFO - succefully com3.cn_002
+[2022-12-30 12:25:20,938] 49 root - INFO - succefully com3.cn_003
+[2022-12-30 12:25:20,971] 49 root - INFO - succefully com3.cn_004
+[2022-12-30 12:25:21,003] 49 root - INFO - succefully com3.cn_005
+[2022-12-30 12:25:21,036] 49 root - INFO - succefully com3.cn_006
+[2022-12-30 12:25:21,068] 49 root - INFO - succefully com3.cn_007
+[2022-12-30 12:25:21,098] 49 root - INFO - succefully com3.cn_008
+[2022-12-30 12:25:21,133] 49 root - INFO - succefully com3.cn_009
+[2022-12-30 12:25:21,162] 49 root - INFO - succefully com3.co_000
+[2022-12-30 12:25:21,191] 49 root - INFO - succefully com3.cp_000
+[2022-12-30 12:25:21,224] 49 root - INFO - succefully com3.cq_000
+[2022-12-30 12:25:21,259] 49 root - INFO - succefully com3.cs_000
+[2022-12-30 12:25:21,290] 49 root - INFO - succefully com3.cs_001
+[2022-12-30 12:25:21,321] 49 root - INFO - succefully com3.cs_002
+[2022-12-30 12:25:21,348] 49 root - INFO - succefully com3.cs_003
+[2022-12-30 12:25:21,375] 49 root - INFO - succefully com3.cs_004
+[2022-12-30 12:25:21,414] 49 root - INFO - succefully com3.cs_005
+[2022-12-30 12:25:21,440] 49 root - INFO - succefully com3.cs_006
+[2022-12-30 12:25:21,465] 49 root - INFO - succefully com3.cs_007
+[2022-12-30 12:25:21,489] 49 root - INFO - succefully com3.cs_008
+[2022-12-30 12:25:21,512] 49 root - INFO - succefully com3.cs_009
+[2022-12-30 12:25:21,535] 49 root - INFO - succefully com3.ct_000
+[2022-12-30 12:25:21,557] 49 root - INFO - succefully com3.cu_000
+[2022-12-30 12:25:21,579] 49 root - INFO - succefully com3.cv_000
+[2022-12-30 12:25:21,601] 49 root - INFO - succefully com3.cx_000
+[2022-12-30 12:25:21,621] 49 root - INFO - succefully com3.cy_000
+[2022-12-30 12:25:21,642] 49 root - INFO - succefully com3.cz_000
+[2022-12-30 12:25:21,662] 49 root - INFO - succefully com3.da_000
+[2022-12-30 12:25:21,681] 49 root - INFO - succefully com3.db_000
+[2022-12-30 12:25:21,701] 49 root - INFO - succefully com3.dc_000
+[2022-12-30 12:25:21,723] 49 root - INFO - succefully com3.dd_000
+[2022-12-30 12:25:21,744] 49 root - INFO - succefully com3.de_000
+[2022-12-30 12:25:21,764] 49 root - INFO - succefully com3.df_000
+[2022-12-30 12:25:21,784] 49 root - INFO - succefully com3.dg_000
+[2022-12-30 12:25:21,802] 49 root - INFO - succefully com3.dh_000
+[2022-12-30 12:25:21,821] 49 root - INFO - succefully com3.di_000
+[2022-12-30 12:25:21,839] 49 root - INFO - succefully com3.dj_000
+[2022-12-30 12:25:21,856] 49 root - INFO - succefully com3.dk_000
+[2022-12-30 12:25:21,872] 49 root - INFO - succefully com3.dl_000
+[2022-12-30 12:25:21,888] 49 root - INFO - succefully com3.dm_000
+[2022-12-30 12:25:21,907] 49 root - INFO - succefully com3.dn_000
+[2022-12-30 12:25:21,923] 49 root - INFO - succefully com3.do_000
+[2022-12-30 12:25:21,939] 49 root - INFO - succefully com3.dp_000
+[2022-12-30 12:25:21,954] 49 root - INFO - succefully com3.dq_000
+[2022-12-30 12:25:21,968] 49 root - INFO - succefully com3.dr_000
+[2022-12-30 12:25:21,983] 49 root - INFO - succefully com3.ds_000
+[2022-12-30 12:25:21,998] 49 root - INFO - succefully com3.dt_000
+[2022-12-30 12:25:22,013] 49 root - INFO - succefully com3.du_000
+[2022-12-30 12:25:22,027] 49 root - INFO - succefully com3.dv_000
+[2022-12-30 12:25:22,040] 49 root - INFO - succefully com3.dx_000
+[2022-12-30 12:25:22,052] 49 root - INFO - succefully com3.dy_000
+[2022-12-30 12:25:22,063] 49 root - INFO - succefully com3.dz_000
+[2022-12-30 12:25:22,076] 49 root - INFO - succefully com3.ea_000
+[2022-12-30 12:25:22,089] 49 root - INFO - succefully com3.eb_000
+[2022-12-30 12:25:22,100] 49 root - INFO - succefully com3.ec_00
+[2022-12-30 12:25:22,111] 49 root - INFO - succefully com3.ed_000
+[2022-12-30 12:25:22,122] 49 root - INFO - succefully com3.ee_000
+[2022-12-30 12:25:22,132] 49 root - INFO - succefully com3.ee_001
+[2022-12-30 12:25:22,142] 49 root - INFO - succefully com3.ee_002
+[2022-12-30 12:25:22,151] 49 root - INFO - succefully com3.ee_003
+[2022-12-30 12:25:22,162] 49 root - INFO - succefully com3.ee_004
+[2022-12-30 12:25:22,170] 49 root - INFO - succefully com3.ee_005
+[2022-12-30 12:25:22,177] 49 root - INFO - succefully com3.ee_006
+[2022-12-30 12:25:22,184] 49 root - INFO - succefully com3.ee_007
+[2022-12-30 12:25:22,191] 49 root - INFO - succefully com3.ee_008
+[2022-12-30 12:25:22,197] 49 root - INFO - succefully com3.ee_009
+[2022-12-30 12:25:22,201] 49 root - INFO - succefully com3.ef_000
+[2022-12-30 12:25:22,206] 49 root - INFO - succefully com3.eg_000
+[2022-12-30 12:25:22,207] 49 root - INFO - succefully com3.aa_000
+[2022-12-30 12:25:22,216] 49 root - INFO - succefully com3.ac_000
+[2022-12-30 12:25:22,225] 49 root - INFO - succefully com3.ad_000
+[2022-12-30 12:25:22,233] 49 root - INFO - succefully com3.ae_000
+[2022-12-30 12:25:22,241] 49 root - INFO - succefully com3.af_000
+[2022-12-30 12:25:22,250] 49 root - INFO - succefully com3.ag_000
+[2022-12-30 12:25:22,258] 49 root - INFO - succefully com3.ag_001
+[2022-12-30 12:25:22,267] 49 root - INFO - succefully com3.ag_002
+[2022-12-30 12:25:22,275] 49 root - INFO - succefully com3.ag_003
+[2022-12-30 12:25:22,285] 49 root - INFO - succefully com3.ag_004
+[2022-12-30 12:25:22,296] 49 root - INFO - succefully com3.ag_005
+[2022-12-30 12:25:22,307] 49 root - INFO - succefully com3.ag_006
+[2022-12-30 12:25:22,317] 49 root - INFO - succefully com3.ag_007
+[2022-12-30 12:25:22,326] 49 root - INFO - succefully com3.ag_008
+[2022-12-30 12:25:22,334] 49 root - INFO - succefully com3.ag_009
+[2022-12-30 12:25:22,342] 49 root - INFO - succefully com3.ah_000
+[2022-12-30 12:25:22,350] 49 root - INFO - succefully com3.ai_000
+[2022-12-30 12:25:22,358] 49 root - INFO - succefully com3.aj_000
+[2022-12-30 12:25:22,366] 49 root - INFO - succefully com3.ak_000
+[2022-12-30 12:25:22,376] 49 root - INFO - succefully com3.al_000
+[2022-12-30 12:25:22,383] 49 root - INFO - succefully com3.am_0
+[2022-12-30 12:25:22,387] 49 root - INFO - succefully com3.an_000
+[2022-12-30 12:25:22,391] 49 root - INFO - succefully com3.ao_000
+[2022-12-30 12:25:22,394] 49 root - INFO - succefully com3.ap_000
+[2022-12-30 12:25:22,398] 49 root - INFO - succefully com3.aq_000
+[2022-12-30 12:25:22,401] 49 root - INFO - succefully com3.ar_000
+[2022-12-30 12:25:22,405] 49 root - INFO - succefully com3.as_000
+[2022-12-30 12:25:22,408] 49 root - INFO - succefully com3.at_000
+[2022-12-30 12:25:22,411] 49 root - INFO - succefully com3.au_000
+[2022-12-30 12:25:22,415] 49 root - INFO - succefully com3.av_000
+[2022-12-30 12:25:22,418] 49 root - INFO - succefully com3.ax_000
+[2022-12-30 12:25:22,421] 49 root - INFO - succefully com3.ay_000
+[2022-12-30 12:25:22,425] 49 root - INFO - succefully com3.ay_001
+[2022-12-30 12:25:22,428] 49 root - INFO - succefully com3.ay_002
+[2022-12-30 12:25:22,431] 49 root - INFO - succefully com3.ay_003
+[2022-12-30 12:25:22,440] 49 root - INFO - succefully com3.ay_004
+[2022-12-30 12:25:22,443] 49 root - INFO - succefully com3.ay_005
+[2022-12-30 12:25:22,447] 49 root - INFO - succefully com3.ay_006
+[2022-12-30 12:25:22,450] 49 root - INFO - succefully com3.ay_007
+[2022-12-30 12:25:22,453] 49 root - INFO - succefully com3.ay_008
+[2022-12-30 12:25:22,456] 49 root - INFO - succefully com3.ay_009
+[2022-12-30 12:25:22,460] 49 root - INFO - succefully com3.az_000
+[2022-12-30 12:25:22,463] 49 root - INFO - succefully com3.az_001
+[2022-12-30 12:25:22,466] 49 root - INFO - succefully com3.az_002
+[2022-12-30 12:25:22,469] 49 root - INFO - succefully com3.az_003
+[2022-12-30 12:25:22,472] 49 root - INFO - succefully com3.az_004
+[2022-12-30 12:25:22,480] 49 root - INFO - succefully com3.az_005
+[2022-12-30 12:25:22,484] 49 root - INFO - succefully com3.az_006
+[2022-12-30 12:25:22,487] 49 root - INFO - succefully com3.az_007
+[2022-12-30 12:25:22,490] 49 root - INFO - succefully com3.az_008
+[2022-12-30 12:25:22,493] 49 root - INFO - succefully com3.az_009
+[2022-12-30 12:25:22,496] 49 root - INFO - succefully com3.ba_000
+[2022-12-30 12:25:22,499] 49 root - INFO - succefully com3.ba_001
+[2022-12-30 12:25:22,501] 49 root - INFO - succefully com3.ba_002
+[2022-12-30 12:25:22,504] 49 root - INFO - succefully com3.ba_003
+[2022-12-30 12:25:22,507] 49 root - INFO - succefully com3.ba_004
+[2022-12-30 12:25:22,510] 49 root - INFO - succefully com3.ba_005
+[2022-12-30 12:25:22,513] 49 root - INFO - succefully com3.ba_006
+[2022-12-30 12:25:22,516] 49 root - INFO - succefully com3.ba_007
+[2022-12-30 12:25:22,519] 49 root - INFO - succefully com3.ba_008
+[2022-12-30 12:25:22,522] 49 root - INFO - succefully com3.ba_009
+[2022-12-30 12:25:22,525] 49 root - INFO - succefully com3.bb_000
+[2022-12-30 12:25:22,528] 49 root - INFO - succefully com3.bc_000
+[2022-12-30 12:25:22,531] 49 root - INFO - succefully com3.bd_000
+[2022-12-30 12:25:22,534] 49 root - INFO - succefully com3.be_000
+[2022-12-30 12:25:22,537] 49 root - INFO - succefully com3.bf_000
+[2022-12-30 12:25:22,540] 49 root - INFO - succefully com3.bg_000
+[2022-12-30 12:25:22,543] 49 root - INFO - succefully com3.bh_000
+[2022-12-30 12:25:22,545] 49 root - INFO - succefully com3.bi_000
+[2022-12-30 12:25:22,548] 49 root - INFO - succefully com3.bj_000
+[2022-12-30 12:25:22,551] 49 root - INFO - succefully com3.bk_000
+[2022-12-30 12:25:22,554] 49 root - INFO - succefully com3.bl_000
+[2022-12-30 12:25:22,557] 49 root - INFO - succefully com3.bm_000
+[2022-12-30 12:25:22,559] 49 root - INFO - succefully com3.bs_000
+[2022-12-30 12:25:22,562] 49 root - INFO - succefully com3.bt_000
+[2022-12-30 12:25:22,566] 49 root - INFO - succefully com3.bu_000
+[2022-12-30 12:25:22,568] 49 root - INFO - succefully com3.bv_000
+[2022-12-30 12:25:22,571] 49 root - INFO - succefully com3.bx_000
+[2022-12-30 12:25:22,574] 49 root - INFO - succefully com3.by_000
+[2022-12-30 12:25:22,576] 49 root - INFO - succefully com3.bz_000
+[2022-12-30 12:25:22,579] 49 root - INFO - succefully com3.ca_000
+[2022-12-30 12:25:22,581] 49 root - INFO - succefully com3.cb_000
+[2022-12-30 12:25:22,584] 49 root - INFO - succefully com3.cc_000
+[2022-12-30 12:25:22,586] 49 root - INFO - succefully com3.cd_000
+[2022-12-30 12:25:22,589] 49 root - INFO - succefully com3.ce_000
+[2022-12-30 12:25:22,591] 49 root - INFO - succefully com3.cf_000
+[2022-12-30 12:25:22,594] 49 root - INFO - succefully com3.cg_000
+[2022-12-30 12:25:22,596] 49 root - INFO - succefully com3.ch_000
+[2022-12-30 12:25:22,599] 49 root - INFO - succefully com3.ci_000
+[2022-12-30 12:25:22,601] 49 root - INFO - succefully com3.cj_000
+[2022-12-30 12:25:22,604] 49 root - INFO - succefully com3.ck_000
+[2022-12-30 12:25:22,606] 49 root - INFO - succefully com3.cl_000
+[2022-12-30 12:25:22,609] 49 root - INFO - succefully com3.cm_000
+[2022-12-30 12:25:22,611] 49 root - INFO - succefully com3.cn_000
+[2022-12-30 12:25:22,613] 49 root - INFO - succefully com3.cn_001
+[2022-12-30 12:25:22,615] 49 root - INFO - succefully com3.cn_002
+[2022-12-30 12:25:22,618] 49 root - INFO - succefully com3.cn_003
+[2022-12-30 12:25:22,620] 49 root - INFO - succefully com3.cn_004
+[2022-12-30 12:25:22,622] 49 root - INFO - succefully com3.cn_005
+[2022-12-30 12:25:22,624] 49 root - INFO - succefully com3.cn_006
+[2022-12-30 12:25:22,626] 49 root - INFO - succefully com3.cn_007
+[2022-12-30 12:25:22,629] 49 root - INFO - succefully com3.cn_008
+[2022-12-30 12:25:22,631] 49 root - INFO - succefully com3.cn_009
+[2022-12-30 12:25:22,632] 49 root - INFO - succefully com3.co_000
+[2022-12-30 12:25:22,634] 49 root - INFO - succefully com3.cp_000
+[2022-12-30 12:25:22,636] 49 root - INFO - succefully com3.cq_000
+[2022-12-30 12:25:22,638] 49 root - INFO - succefully com3.cs_000
+[2022-12-30 12:25:22,640] 49 root - INFO - succefully com3.cs_001
+[2022-12-30 12:25:22,642] 49 root - INFO - succefully com3.cs_002
+[2022-12-30 12:25:22,644] 49 root - INFO - succefully com3.cs_003
+[2022-12-30 12:25:22,645] 49 root - INFO - succefully com3.cs_004
+[2022-12-30 12:25:22,647] 49 root - INFO - succefully com3.cs_005
+[2022-12-30 12:25:22,649] 49 root - INFO - succefully com3.cs_006
+[2022-12-30 12:25:22,651] 49 root - INFO - succefully com3.cs_007
+[2022-12-30 12:25:22,652] 49 root - INFO - succefully com3.cs_008
+[2022-12-30 12:25:22,654] 49 root - INFO - succefully com3.cs_009
+[2022-12-30 12:25:22,656] 49 root - INFO - succefully com3.ct_000
+[2022-12-30 12:25:22,659] 49 root - INFO - succefully com3.cu_000
+[2022-12-30 12:25:22,661] 49 root - INFO - succefully com3.cv_000
+[2022-12-30 12:25:22,663] 49 root - INFO - succefully com3.cx_000
+[2022-12-30 12:25:22,664] 49 root - INFO - succefully com3.cy_000
+[2022-12-30 12:25:22,666] 49 root - INFO - succefully com3.cz_000
+[2022-12-30 12:25:22,667] 49 root - INFO - succefully com3.da_000
+[2022-12-30 12:25:22,669] 49 root - INFO - succefully com3.db_000
+[2022-12-30 12:25:22,670] 49 root - INFO - succefully com3.dc_000
+[2022-12-30 12:25:22,672] 49 root - INFO - succefully com3.dd_000
+[2022-12-30 12:25:22,673] 49 root - INFO - succefully com3.de_000
+[2022-12-30 12:25:22,674] 49 root - INFO - succefully com3.df_000
+[2022-12-30 12:25:22,676] 49 root - INFO - succefully com3.dg_000
+[2022-12-30 12:25:22,677] 49 root - INFO - succefully com3.dh_000
+[2022-12-30 12:25:22,678] 49 root - INFO - succefully com3.di_000
+[2022-12-30 12:25:22,679] 49 root - INFO - succefully com3.dj_000
+[2022-12-30 12:25:22,680] 49 root - INFO - succefully com3.dk_000
+[2022-12-30 12:25:22,681] 49 root - INFO - succefully com3.dl_000
+[2022-12-30 12:25:22,683] 49 root - INFO - succefully com3.dm_000
+[2022-12-30 12:25:22,684] 49 root - INFO - succefully com3.dn_000
+[2022-12-30 12:25:22,685] 49 root - INFO - succefully com3.do_000
+[2022-12-30 12:25:22,686] 49 root - INFO - succefully com3.dp_000
+[2022-12-30 12:25:22,687] 49 root - INFO - succefully com3.dq_000
+[2022-12-30 12:25:22,688] 49 root - INFO - succefully com3.dr_000
+[2022-12-30 12:25:22,689] 49 root - INFO - succefully com3.ds_000
+[2022-12-30 12:25:22,689] 49 root - INFO - succefully com3.dt_000
+[2022-12-30 12:25:22,691] 49 root - INFO - succefully com3.du_000
+[2022-12-30 12:25:22,691] 49 root - INFO - succefully com3.dv_000
+[2022-12-30 12:25:22,692] 49 root - INFO - succefully com3.dx_000
+[2022-12-30 12:25:22,693] 49 root - INFO - succefully com3.dy_000
+[2022-12-30 12:25:22,694] 49 root - INFO - succefully com3.dz_000
+[2022-12-30 12:25:22,695] 49 root - INFO - succefully com3.ea_000
+[2022-12-30 12:25:22,695] 49 root - INFO - succefully com3.eb_000
+[2022-12-30 12:25:22,696] 49 root - INFO - succefully com3.ec_00
+[2022-12-30 12:25:22,697] 49 root - INFO - succefully com3.ed_000
+[2022-12-30 12:25:22,697] 49 root - INFO - succefully com3.ee_000
+[2022-12-30 12:25:22,698] 49 root - INFO - succefully com3.ee_001
+[2022-12-30 12:25:22,699] 49 root - INFO - succefully com3.ee_002
+[2022-12-30 12:25:22,699] 49 root - INFO - succefully com3.ee_003
+[2022-12-30 12:25:22,700] 49 root - INFO - succefully com3.ee_004
+[2022-12-30 12:25:22,700] 49 root - INFO - succefully com3.ee_005
+[2022-12-30 12:25:22,702] 49 root - INFO - succefully com3.ee_006
+[2022-12-30 12:25:22,702] 49 root - INFO - succefully com3.ee_007
+[2022-12-30 12:25:22,703] 49 root - INFO - succefully com3.ee_008
+[2022-12-30 12:25:22,703] 49 root - INFO - succefully com3.ee_009
+[2022-12-30 12:25:22,704] 49 root - INFO - succefully com3.ef_000
+[2022-12-30 12:25:22,704] 49 root - INFO - succefully com3.eg_000
+[2022-12-30 12:25:22,705] 49 root - INFO - succefully com3.aa_000
+[2022-12-30 12:25:22,707] 49 root - INFO - succefully com3.ac_000
+[2022-12-30 12:25:22,708] 49 root - INFO - succefully com3.ad_000
+[2022-12-30 12:25:22,710] 49 root - INFO - succefully com3.ae_000
+[2022-12-30 12:25:22,711] 49 root - INFO - succefully com3.af_000
+[2022-12-30 12:25:22,712] 49 root - INFO - succefully com3.ag_000
+[2022-12-30 12:25:22,714] 49 root - INFO - succefully com3.ag_001
+[2022-12-30 12:25:22,715] 49 root - INFO - succefully com3.ag_002
+[2022-12-30 12:25:22,716] 49 root - INFO - succefully com3.ag_003
+[2022-12-30 12:25:22,718] 49 root - INFO - succefully com3.ag_004
+[2022-12-30 12:25:22,719] 49 root - INFO - succefully com3.ag_005
+[2022-12-30 12:25:22,720] 49 root - INFO - succefully com3.ag_006
+[2022-12-30 12:25:22,722] 49 root - INFO - succefully com3.ag_007
+[2022-12-30 12:25:22,723] 49 root - INFO - succefully com3.ag_008
+[2022-12-30 12:25:22,724] 49 root - INFO - succefully com3.ag_009
+[2022-12-30 12:25:22,726] 49 root - INFO - succefully com3.ah_000
+[2022-12-30 12:25:22,727] 49 root - INFO - succefully com3.ai_000
+[2022-12-30 12:25:22,728] 49 root - INFO - succefully com3.aj_000
+[2022-12-30 12:25:22,729] 49 root - INFO - succefully com3.ak_000
+[2022-12-30 12:25:22,731] 49 root - INFO - succefully com3.al_000
+[2022-12-30 12:25:22,732] 49 root - INFO - succefully com3.am_0
+[2022-12-30 12:25:22,733] 49 root - INFO - succefully com3.an_000
+[2022-12-30 12:25:22,734] 49 root - INFO - succefully com3.ao_000
+[2022-12-30 12:25:22,736] 49 root - INFO - succefully com3.ap_000
+[2022-12-30 12:25:22,737] 49 root - INFO - succefully com3.aq_000
+[2022-12-30 12:25:22,738] 49 root - INFO - succefully com3.ar_000
+[2022-12-30 12:25:22,739] 49 root - INFO - succefully com3.as_000
+[2022-12-30 12:25:22,740] 49 root - INFO - succefully com3.at_000
+[2022-12-30 12:25:22,741] 49 root - INFO - succefully com3.au_000
+[2022-12-30 12:25:22,743] 49 root - INFO - succefully com3.av_000
+[2022-12-30 12:25:22,744] 49 root - INFO - succefully com3.ax_000
+[2022-12-30 12:25:22,745] 49 root - INFO - succefully com3.ay_000
+[2022-12-30 12:25:22,746] 49 root - INFO - succefully com3.ay_001
+[2022-12-30 12:25:22,747] 49 root - INFO - succefully com3.ay_002
+[2022-12-30 12:25:22,748] 49 root - INFO - succefully com3.ay_003
+[2022-12-30 12:25:22,750] 49 root - INFO - succefully com3.ay_004
+[2022-12-30 12:25:22,751] 49 root - INFO - succefully com3.ay_005
+[2022-12-30 12:25:22,752] 49 root - INFO - succefully com3.ay_006
+[2022-12-30 12:25:22,753] 49 root - INFO - succefully com3.ay_007
+[2022-12-30 12:25:22,754] 49 root - INFO - succefully com3.ay_008
+[2022-12-30 12:25:22,755] 49 root - INFO - succefully com3.ay_009
+[2022-12-30 12:25:22,756] 49 root - INFO - succefully com3.az_000
+[2022-12-30 12:25:22,757] 49 root - INFO - succefully com3.az_001
+[2022-12-30 12:25:22,759] 49 root - INFO - succefully com3.az_002
+[2022-12-30 12:25:22,760] 49 root - INFO - succefully com3.az_003
+[2022-12-30 12:25:22,761] 49 root - INFO - succefully com3.az_004
+[2022-12-30 12:25:22,762] 49 root - INFO - succefully com3.az_005
+[2022-12-30 12:25:22,763] 49 root - INFO - succefully com3.az_006
+[2022-12-30 12:25:22,764] 49 root - INFO - succefully com3.az_007
+[2022-12-30 12:25:22,765] 49 root - INFO - succefully com3.az_008
+[2022-12-30 12:25:22,766] 49 root - INFO - succefully com3.az_009
+[2022-12-30 12:25:22,767] 49 root - INFO - succefully com3.ba_000
+[2022-12-30 12:25:22,768] 49 root - INFO - succefully com3.ba_001
+[2022-12-30 12:25:22,769] 49 root - INFO - succefully com3.ba_002
+[2022-12-30 12:25:22,770] 49 root - INFO - succefully com3.ba_003
+[2022-12-30 12:25:22,771] 49 root - INFO - succefully com3.ba_004
+[2022-12-30 12:25:22,772] 49 root - INFO - succefully com3.ba_005
+[2022-12-30 12:25:22,773] 49 root - INFO - succefully com3.ba_006
+[2022-12-30 12:25:22,774] 49 root - INFO - succefully com3.ba_007
+[2022-12-30 12:25:22,776] 49 root - INFO - succefully com3.ba_008
+[2022-12-30 12:25:22,776] 49 root - INFO - succefully com3.ba_009
+[2022-12-30 12:25:22,777] 49 root - INFO - succefully com3.bb_000
+[2022-12-30 12:25:22,778] 49 root - INFO - succefully com3.bc_000
+[2022-12-30 12:25:22,779] 49 root - INFO - succefully com3.bd_000
+[2022-12-30 12:25:22,780] 49 root - INFO - succefully com3.be_000
+[2022-12-30 12:25:22,781] 49 root - INFO - succefully com3.bf_000
+[2022-12-30 12:25:22,782] 49 root - INFO - succefully com3.bg_000
+[2022-12-30 12:25:22,783] 49 root - INFO - succefully com3.bh_000
+[2022-12-30 12:25:22,784] 49 root - INFO - succefully com3.bi_000
+[2022-12-30 12:25:22,785] 49 root - INFO - succefully com3.bj_000
+[2022-12-30 12:25:22,786] 49 root - INFO - succefully com3.bk_000
+[2022-12-30 12:25:22,787] 49 root - INFO - succefully com3.bl_000
+[2022-12-30 12:25:22,788] 49 root - INFO - succefully com3.bm_000
+[2022-12-30 12:25:22,789] 49 root - INFO - succefully com3.bs_000
+[2022-12-30 12:25:22,790] 49 root - INFO - succefully com3.bt_000
+[2022-12-30 12:25:22,791] 49 root - INFO - succefully com3.bu_000
+[2022-12-30 12:25:22,791] 49 root - INFO - succefully com3.bv_000
+[2022-12-30 12:25:22,792] 49 root - INFO - succefully com3.bx_000
+[2022-12-30 12:25:22,793] 49 root - INFO - succefully com3.by_000
+[2022-12-30 12:25:22,794] 49 root - INFO - succefully com3.bz_000
+[2022-12-30 12:25:22,795] 49 root - INFO - succefully com3.ca_000
+[2022-12-30 12:25:22,796] 49 root - INFO - succefully com3.cb_000
+[2022-12-30 12:25:22,797] 49 root - INFO - succefully com3.cc_000
+[2022-12-30 12:25:22,797] 49 root - INFO - succefully com3.cd_000
+[2022-12-30 12:25:22,798] 49 root - INFO - succefully com3.ce_000
+[2022-12-30 12:25:22,799] 49 root - INFO - succefully com3.cf_000
+[2022-12-30 12:25:22,800] 49 root - INFO - succefully com3.cg_000
+[2022-12-30 12:25:22,801] 49 root - INFO - succefully com3.ch_000
+[2022-12-30 12:25:22,802] 49 root - INFO - succefully com3.ci_000
+[2022-12-30 12:25:22,803] 49 root - INFO - succefully com3.cj_000
+[2022-12-30 12:25:22,804] 49 root - INFO - succefully com3.ck_000
+[2022-12-30 12:25:22,804] 49 root - INFO - succefully com3.cl_000
+[2022-12-30 12:25:22,805] 49 root - INFO - succefully com3.cm_000
+[2022-12-30 12:25:22,806] 49 root - INFO - succefully com3.cn_000
+[2022-12-30 12:25:22,807] 49 root - INFO - succefully com3.cn_001
+[2022-12-30 12:25:22,808] 49 root - INFO - succefully com3.cn_002
+[2022-12-30 12:25:22,808] 49 root - INFO - succefully com3.cn_003
+[2022-12-30 12:25:22,809] 49 root - INFO - succefully com3.cn_004
+[2022-12-30 12:25:22,810] 49 root - INFO - succefully com3.cn_005
+[2022-12-30 12:25:22,811] 49 root - INFO - succefully com3.cn_006
+[2022-12-30 12:25:22,811] 49 root - INFO - succefully com3.cn_007
+[2022-12-30 12:25:22,812] 49 root - INFO - succefully com3.cn_008
+[2022-12-30 12:25:22,813] 49 root - INFO - succefully com3.cn_009
+[2022-12-30 12:25:22,813] 49 root - INFO - succefully com3.co_000
+[2022-12-30 12:25:22,814] 49 root - INFO - succefully com3.cp_000
+[2022-12-30 12:25:22,815] 49 root - INFO - succefully com3.cq_000
+[2022-12-30 12:25:22,816] 49 root - INFO - succefully com3.cs_000
+[2022-12-30 12:25:22,816] 49 root - INFO - succefully com3.cs_001
+[2022-12-30 12:25:22,817] 49 root - INFO - succefully com3.cs_002
+[2022-12-30 12:25:22,818] 49 root - INFO - succefully com3.cs_003
+[2022-12-30 12:25:22,818] 49 root - INFO - succefully com3.cs_004
+[2022-12-30 12:25:22,819] 49 root - INFO - succefully com3.cs_005
+[2022-12-30 12:25:22,820] 49 root - INFO - succefully com3.cs_006
+[2022-12-30 12:25:22,820] 49 root - INFO - succefully com3.cs_007
+[2022-12-30 12:25:22,821] 49 root - INFO - succefully com3.cs_008
+[2022-12-30 12:25:22,822] 49 root - INFO - succefully com3.cs_009
+[2022-12-30 12:25:22,823] 49 root - INFO - succefully com3.ct_000
+[2022-12-30 12:25:22,823] 49 root - INFO - succefully com3.cu_000
+[2022-12-30 12:25:22,824] 49 root - INFO - succefully com3.cv_000
+[2022-12-30 12:25:22,824] 49 root - INFO - succefully com3.cx_000
+[2022-12-30 12:25:22,825] 49 root - INFO - succefully com3.cy_000
+[2022-12-30 12:25:22,826] 49 root - INFO - succefully com3.cz_000
+[2022-12-30 12:25:22,826] 49 root - INFO - succefully com3.da_000
+[2022-12-30 12:25:22,827] 49 root - INFO - succefully com3.db_000
+[2022-12-30 12:25:22,828] 49 root - INFO - succefully com3.dc_000
+[2022-12-30 12:25:22,828] 49 root - INFO - succefully com3.dd_000
+[2022-12-30 12:25:22,829] 49 root - INFO - succefully com3.de_000
+[2022-12-30 12:25:22,829] 49 root - INFO - succefully com3.df_000
+[2022-12-30 12:25:22,830] 49 root - INFO - succefully com3.dg_000
+[2022-12-30 12:25:22,831] 49 root - INFO - succefully com3.dh_000
+[2022-12-30 12:25:22,831] 49 root - INFO - succefully com3.di_000
+[2022-12-30 12:25:22,832] 49 root - INFO - succefully com3.dj_000
+[2022-12-30 12:25:22,832] 49 root - INFO - succefully com3.dk_000
+[2022-12-30 12:25:22,833] 49 root - INFO - succefully com3.dl_000
+[2022-12-30 12:25:22,834] 49 root - INFO - succefully com3.dm_000
+[2022-12-30 12:25:22,834] 49 root - INFO - succefully com3.dn_000
+[2022-12-30 12:25:22,835] 49 root - INFO - succefully com3.do_000
+[2022-12-30 12:25:22,835] 49 root - INFO - succefully com3.dp_000
+[2022-12-30 12:25:22,836] 49 root - INFO - succefully com3.dq_000
+[2022-12-30 12:25:22,836] 49 root - INFO - succefully com3.dr_000
+[2022-12-30 12:25:22,837] 49 root - INFO - succefully com3.ds_000
+[2022-12-30 12:25:22,837] 49 root - INFO - succefully com3.dt_000
+[2022-12-30 12:25:22,838] 49 root - INFO - succefully com3.du_000
+[2022-12-30 12:25:22,839] 49 root - INFO - succefully com3.dv_000
+[2022-12-30 12:25:22,839] 49 root - INFO - succefully com3.dx_000
+[2022-12-30 12:25:22,840] 49 root - INFO - succefully com3.dy_000
+[2022-12-30 12:25:22,840] 49 root - INFO - succefully com3.dz_000
+[2022-12-30 12:25:22,841] 49 root - INFO - succefully com3.ea_000
+[2022-12-30 12:25:22,841] 49 root - INFO - succefully com3.eb_000
+[2022-12-30 12:25:22,842] 49 root - INFO - succefully com3.ec_00
+[2022-12-30 12:25:22,842] 49 root - INFO - succefully com3.ed_000
+[2022-12-30 12:25:22,843] 49 root - INFO - succefully com3.ee_000
+[2022-12-30 12:25:22,843] 49 root - INFO - succefully com3.ee_001
+[2022-12-30 12:25:22,844] 49 root - INFO - succefully com3.ee_002
+[2022-12-30 12:25:22,844] 49 root - INFO - succefully com3.ee_003
+[2022-12-30 12:25:22,844] 49 root - INFO - succefully com3.ee_004
+[2022-12-30 12:25:22,845] 49 root - INFO - succefully com3.ee_005
+[2022-12-30 12:25:22,845] 49 root - INFO - succefully com3.ee_006
+[2022-12-30 12:25:22,846] 49 root - INFO - succefully com3.ee_007
+[2022-12-30 12:25:22,846] 49 root - INFO - succefully com3.ee_008
+[2022-12-30 12:25:22,847] 49 root - INFO - succefully com3.ee_009
+[2022-12-30 12:25:22,847] 49 root - INFO - succefully com3.ef_000
+[2022-12-30 12:25:22,848] 49 root - INFO - succefully com3.eg_000
+[2022-12-30 12:25:22,848] 146 root - INFO - Is all required columns present in train df
+[2022-12-30 12:25:22,848] 68 root - INFO - is_required_columns_exists or not.
+[2022-12-30 12:25:22,848] 76 root - INFO - missing_columns are:[]
+[2022-12-30 12:25:22,848] 148 root - INFO - Is all required columns present in test df
+[2022-12-30 12:25:22,848] 68 root - INFO - is_required_columns_exists or not.
+[2022-12-30 12:25:22,848] 76 root - INFO - missing_columns are:[]
+[2022-12-30 12:25:22,848] 152 root - INFO - As all columns available in train df hence detecting data drift
+[2022-12-30 12:25:22,849] 95 root - INFO - Hypothesis class: object, object
+[2022-12-30 12:25:22,980] 95 root - INFO - Hypothesis aa_000: float64, float64
+[2022-12-30 12:25:23,022] 95 root - INFO - Hypothesis ac_000: float64, float64
+[2022-12-30 12:25:23,061] 95 root - INFO - Hypothesis ad_000: float64, float64
+[2022-12-30 12:25:23,100] 95 root - INFO - Hypothesis ae_000: float64, float64
+[2022-12-30 12:25:23,136] 95 root - INFO - Hypothesis af_000: float64, float64
+[2022-12-30 12:25:23,172] 95 root - INFO - Hypothesis ag_000: float64, float64
+[2022-12-30 12:25:23,210] 95 root - INFO - Hypothesis ag_001: float64, float64
+[2022-12-30 12:25:23,246] 95 root - INFO - Hypothesis ag_002: float64, float64
+[2022-12-30 12:25:23,290] 95 root - INFO - Hypothesis ag_003: float64, float64
+[2022-12-30 12:25:23,338] 95 root - INFO - Hypothesis ag_004: float64, float64
+[2022-12-30 12:25:23,388] 95 root - INFO - Hypothesis ag_005: float64, float64
+[2022-12-30 12:25:23,399] 95 root - INFO - Hypothesis ag_006: float64, float64
+[2022-12-30 12:25:23,441] 95 root - INFO - Hypothesis ag_007: float64, float64
+[2022-12-30 12:25:23,450] 95 root - INFO - Hypothesis ag_008: float64, float64
+[2022-12-30 12:25:23,490] 95 root - INFO - Hypothesis ag_009: float64, float64
+[2022-12-30 12:25:23,528] 95 root - INFO - Hypothesis ah_000: float64, float64
+[2022-12-30 12:25:23,569] 95 root - INFO - Hypothesis ai_000: float64, float64
+[2022-12-30 12:25:23,606] 95 root - INFO - Hypothesis aj_000: float64, float64
+[2022-12-30 12:25:23,643] 95 root - INFO - Hypothesis ak_000: float64, float64
+[2022-12-30 12:25:23,679] 95 root - INFO - Hypothesis al_000: float64, float64
+[2022-12-30 12:25:23,719] 95 root - INFO - Hypothesis am_0: float64, float64
+[2022-12-30 12:25:23,759] 95 root - INFO - Hypothesis an_000: float64, float64
+[2022-12-30 12:25:23,801] 95 root - INFO - Hypothesis ao_000: float64, float64
+[2022-12-30 12:25:23,842] 95 root - INFO - Hypothesis ap_000: float64, float64
+[2022-12-30 12:25:23,883] 95 root - INFO - Hypothesis aq_000: float64, float64
+[2022-12-30 12:25:23,925] 95 root - INFO - Hypothesis ar_000: float64, float64
+[2022-12-30 12:25:23,961] 95 root - INFO - Hypothesis as_000: float64, float64
+[2022-12-30 12:25:23,997] 95 root - INFO - Hypothesis at_000: float64, float64
+[2022-12-30 12:25:24,034] 95 root - INFO - Hypothesis au_000: float64, float64
+[2022-12-30 12:25:24,069] 95 root - INFO - Hypothesis av_000: float64, float64
+[2022-12-30 12:25:24,109] 95 root - INFO - Hypothesis ax_000: float64, float64
+[2022-12-30 12:25:24,151] 95 root - INFO - Hypothesis ay_000: float64, float64
+[2022-12-30 12:25:24,188] 95 root - INFO - Hypothesis ay_001: float64, float64
+[2022-12-30 12:25:24,227] 95 root - INFO - Hypothesis ay_002: float64, float64
+[2022-12-30 12:25:24,264] 95 root - INFO - Hypothesis ay_003: float64, float64
+[2022-12-30 12:25:24,299] 95 root - INFO - Hypothesis ay_004: float64, float64
+[2022-12-30 12:25:24,339] 95 root - INFO - Hypothesis ay_005: float64, float64
+[2022-12-30 12:25:24,347] 95 root - INFO - Hypothesis ay_006: float64, float64
+[2022-12-30 12:25:24,388] 95 root - INFO - Hypothesis ay_007: float64, float64
+[2022-12-30 12:25:24,430] 95 root - INFO - Hypothesis ay_008: float64, float64
+[2022-12-30 12:25:24,473] 95 root - INFO - Hypothesis ay_009: float64, float64
+[2022-12-30 12:25:24,511] 95 root - INFO - Hypothesis az_000: float64, float64
+[2022-12-30 12:25:24,521] 95 root - INFO - Hypothesis az_001: float64, float64
+[2022-12-30 12:25:24,564] 95 root - INFO - Hypothesis az_002: float64, float64
+[2022-12-30 12:25:24,606] 95 root - INFO - Hypothesis az_003: float64, float64
+[2022-12-30 12:25:24,651] 95 root - INFO - Hypothesis az_004: float64, float64
+[2022-12-30 12:25:24,662] 95 root - INFO - Hypothesis az_005: float64, float64
+[2022-12-30 12:25:24,705] 95 root - INFO - Hypothesis az_006: float64, float64
+[2022-12-30 12:25:24,745] 95 root - INFO - Hypothesis az_007: float64, float64
+[2022-12-30 12:25:24,782] 95 root - INFO - Hypothesis az_008: float64, float64
+[2022-12-30 12:25:24,819] 95 root - INFO - Hypothesis az_009: float64, float64
+[2022-12-30 12:25:24,855] 95 root - INFO - Hypothesis ba_000: float64, float64
+[2022-12-30 12:25:24,897] 95 root - INFO - Hypothesis ba_001: float64, float64
+[2022-12-30 12:25:24,939] 95 root - INFO - Hypothesis ba_002: float64, float64
+[2022-12-30 12:25:24,981] 95 root - INFO - Hypothesis ba_003: float64, float64
+[2022-12-30 12:25:25,023] 95 root - INFO - Hypothesis ba_004: float64, float64
+[2022-12-30 12:25:25,065] 95 root - INFO - Hypothesis ba_005: float64, float64
+[2022-12-30 12:25:25,106] 95 root - INFO - Hypothesis ba_006: float64, float64
+[2022-12-30 12:25:25,148] 95 root - INFO - Hypothesis ba_007: float64, float64
+[2022-12-30 12:25:25,157] 95 root - INFO - Hypothesis ba_008: float64, float64
+[2022-12-30 12:25:25,197] 95 root - INFO - Hypothesis ba_009: float64, float64
+[2022-12-30 12:25:25,234] 95 root - INFO - Hypothesis bb_000: float64, float64
+[2022-12-30 12:25:25,281] 95 root - INFO - Hypothesis bc_000: float64, float64
+[2022-12-30 12:25:25,289] 95 root - INFO - Hypothesis bd_000: float64, float64
+[2022-12-30 12:25:25,297] 95 root - INFO - Hypothesis be_000: float64, float64
+[2022-12-30 12:25:25,307] 95 root - INFO - Hypothesis bf_000: float64, float64
+[2022-12-30 12:25:25,314] 95 root - INFO - Hypothesis bg_000: float64, float64
+[2022-12-30 12:25:25,356] 95 root - INFO - Hypothesis bh_000: float64, float64
+[2022-12-30 12:25:25,398] 95 root - INFO - Hypothesis bi_000: float64, float64
+[2022-12-30 12:25:25,409] 95 root - INFO - Hypothesis bj_000: float64, float64
+[2022-12-30 12:25:25,452] 95 root - INFO - Hypothesis bk_000: float64, float64
+[2022-12-30 12:25:25,461] 95 root - INFO - Hypothesis bl_000: float64, float64
+[2022-12-30 12:25:25,501] 95 root - INFO - Hypothesis bm_000: float64, float64
+[2022-12-30 12:25:25,539] 95 root - INFO - Hypothesis bs_000: float64, float64
+[2022-12-30 12:25:25,550] 95 root - INFO - Hypothesis bt_000: float64, float64
+[2022-12-30 12:25:25,593] 95 root - INFO - Hypothesis bu_000: float64, float64
+[2022-12-30 12:25:25,635] 95 root - INFO - Hypothesis bv_000: float64, float64
+[2022-12-30 12:25:25,679] 95 root - INFO - Hypothesis bx_000: float64, float64
+[2022-12-30 12:25:25,722] 95 root - INFO - Hypothesis by_000: float64, float64
+[2022-12-30 12:25:25,764] 95 root - INFO - Hypothesis bz_000: float64, float64
+[2022-12-30 12:25:25,773] 95 root - INFO - Hypothesis ca_000: float64, float64
+[2022-12-30 12:25:25,784] 95 root - INFO - Hypothesis cb_000: float64, float64
+[2022-12-30 12:25:25,826] 95 root - INFO - Hypothesis cc_000: float64, float64
+[2022-12-30 12:25:25,868] 95 root - INFO - Hypothesis cd_000: float64, float64
+[2022-12-30 12:25:25,904] 95 root - INFO - Hypothesis ce_000: float64, float64
+[2022-12-30 12:25:25,945] 95 root - INFO - Hypothesis cf_000: float64, float64
+[2022-12-30 12:25:25,981] 95 root - INFO - Hypothesis cg_000: float64, float64
+[2022-12-30 12:25:26,019] 95 root - INFO - Hypothesis ch_000: float64, float64
+[2022-12-30 12:25:26,056] 95 root - INFO - Hypothesis ci_000: float64, float64
+[2022-12-30 12:25:26,098] 95 root - INFO - Hypothesis cj_000: float64, float64
+[2022-12-30 12:25:26,135] 95 root - INFO - Hypothesis ck_000: float64, float64
+[2022-12-30 12:25:26,177] 95 root - INFO - Hypothesis cl_000: float64, float64
+[2022-12-30 12:25:26,215] 95 root - INFO - Hypothesis cm_000: float64, float64
+[2022-12-30 12:25:26,263] 95 root - INFO - Hypothesis cn_000: float64, float64
+[2022-12-30 12:25:26,300] 95 root - INFO - Hypothesis cn_001: float64, float64
+[2022-12-30 12:25:26,336] 95 root - INFO - Hypothesis cn_002: float64, float64
+[2022-12-30 12:25:26,345] 95 root - INFO - Hypothesis cn_003: float64, float64
+[2022-12-30 12:25:26,355] 95 root - INFO - Hypothesis cn_004: float64, float64
+[2022-12-30 12:25:26,398] 95 root - INFO - Hypothesis cn_005: float64, float64
+[2022-12-30 12:25:26,440] 95 root - INFO - Hypothesis cn_006: float64, float64
+[2022-12-30 12:25:26,450] 95 root - INFO - Hypothesis cn_007: float64, float64
+[2022-12-30 12:25:26,495] 95 root - INFO - Hypothesis cn_008: float64, float64
+[2022-12-30 12:25:26,536] 95 root - INFO - Hypothesis cn_009: float64, float64
+[2022-12-30 12:25:26,575] 95 root - INFO - Hypothesis co_000: float64, float64
+[2022-12-30 12:25:26,582] 95 root - INFO - Hypothesis cp_000: float64, float64
+[2022-12-30 12:25:26,621] 95 root - INFO - Hypothesis cq_000: float64, float64
+[2022-12-30 12:25:26,663] 95 root - INFO - Hypothesis cs_000: float64, float64
+[2022-12-30 12:25:26,706] 95 root - INFO - Hypothesis cs_001: float64, float64
+[2022-12-30 12:25:26,746] 95 root - INFO - Hypothesis cs_002: float64, float64
+[2022-12-30 12:25:26,788] 95 root - INFO - Hypothesis cs_003: float64, float64
+[2022-12-30 12:25:26,830] 95 root - INFO - Hypothesis cs_004: float64, float64
+[2022-12-30 12:25:26,873] 95 root - INFO - Hypothesis cs_005: float64, float64
+[2022-12-30 12:25:26,915] 95 root - INFO - Hypothesis cs_006: float64, float64
+[2022-12-30 12:25:26,926] 95 root - INFO - Hypothesis cs_007: float64, float64
+[2022-12-30 12:25:26,937] 95 root - INFO - Hypothesis cs_008: float64, float64
+[2022-12-30 12:25:26,945] 95 root - INFO - Hypothesis cs_009: float64, float64
+[2022-12-30 12:25:26,981] 95 root - INFO - Hypothesis ct_000: float64, float64
+[2022-12-30 12:25:27,022] 95 root - INFO - Hypothesis cu_000: float64, float64
+[2022-12-30 12:25:27,061] 95 root - INFO - Hypothesis cv_000: float64, float64
+[2022-12-30 12:25:27,102] 95 root - INFO - Hypothesis cx_000: float64, float64
+[2022-12-30 12:25:27,144] 95 root - INFO - Hypothesis cy_000: float64, float64
+[2022-12-30 12:25:27,182] 95 root - INFO - Hypothesis cz_000: float64, float64
+[2022-12-30 12:25:27,222] 95 root - INFO - Hypothesis da_000: float64, float64
+[2022-12-30 12:25:27,258] 95 root - INFO - Hypothesis db_000: float64, float64
+[2022-12-30 12:25:27,297] 95 root - INFO - Hypothesis dc_000: float64, float64
+[2022-12-30 12:25:27,338] 95 root - INFO - Hypothesis dd_000: float64, float64
+[2022-12-30 12:25:27,379] 95 root - INFO - Hypothesis de_000: float64, float64
+[2022-12-30 12:25:27,420] 95 root - INFO - Hypothesis df_000: float64, float64
+[2022-12-30 12:25:27,457] 95 root - INFO - Hypothesis dg_000: float64, float64
+[2022-12-30 12:25:27,492] 95 root - INFO - Hypothesis dh_000: float64, float64
+[2022-12-30 12:25:27,529] 95 root - INFO - Hypothesis di_000: float64, float64
+[2022-12-30 12:25:27,566] 95 root - INFO - Hypothesis dj_000: float64, float64
+[2022-12-30 12:25:27,601] 95 root - INFO - Hypothesis dk_000: float64, float64
+[2022-12-30 12:25:27,636] 95 root - INFO - Hypothesis dl_000: float64, float64
+[2022-12-30 12:25:27,673] 95 root - INFO - Hypothesis dm_000: float64, float64
+[2022-12-30 12:25:27,708] 95 root - INFO - Hypothesis dn_000: float64, float64
+[2022-12-30 12:25:27,749] 95 root - INFO - Hypothesis do_000: float64, float64
+[2022-12-30 12:25:27,791] 95 root - INFO - Hypothesis dp_000: float64, float64
+[2022-12-30 12:25:27,833] 95 root - INFO - Hypothesis dq_000: float64, float64
+[2022-12-30 12:25:27,872] 95 root - INFO - Hypothesis dr_000: float64, float64
+[2022-12-30 12:25:27,909] 95 root - INFO - Hypothesis ds_000: float64, float64
+[2022-12-30 12:25:27,920] 95 root - INFO - Hypothesis dt_000: float64, float64
+[2022-12-30 12:25:27,930] 95 root - INFO - Hypothesis du_000: float64, float64
+[2022-12-30 12:25:27,941] 95 root - INFO - Hypothesis dv_000: float64, float64
+[2022-12-30 12:25:27,951] 95 root - INFO - Hypothesis dx_000: float64, float64
+[2022-12-30 12:25:27,990] 95 root - INFO - Hypothesis dy_000: float64, float64
+[2022-12-30 12:25:28,029] 95 root - INFO - Hypothesis dz_000: float64, float64
+[2022-12-30 12:25:28,066] 95 root - INFO - Hypothesis ea_000: float64, float64
+[2022-12-30 12:25:28,103] 95 root - INFO - Hypothesis eb_000: float64, float64
+[2022-12-30 12:25:28,112] 95 root - INFO - Hypothesis ec_00: float64, float64
+[2022-12-30 12:25:28,122] 95 root - INFO - Hypothesis ed_000: float64, float64
+[2022-12-30 12:25:28,131] 95 root - INFO - Hypothesis ee_000: float64, float64
+[2022-12-30 12:25:28,173] 95 root - INFO - Hypothesis ee_001: float64, float64
+[2022-12-30 12:25:28,218] 95 root - INFO - Hypothesis ee_002: float64, float64
+[2022-12-30 12:25:28,260] 95 root - INFO - Hypothesis ee_003: float64, float64
+[2022-12-30 12:25:28,270] 95 root - INFO - Hypothesis ee_004: float64, float64
+[2022-12-30 12:25:28,280] 95 root - INFO - Hypothesis ee_005: float64, float64
+[2022-12-30 12:25:28,323] 95 root - INFO - Hypothesis ee_006: float64, float64
+[2022-12-30 12:25:28,364] 95 root - INFO - Hypothesis ee_007: float64, float64
+[2022-12-30 12:25:28,405] 95 root - INFO - Hypothesis ee_008: float64, float64
+[2022-12-30 12:25:28,446] 95 root - INFO - Hypothesis ee_009: float64, float64
+[2022-12-30 12:25:28,484] 95 root - INFO - Hypothesis ef_000: float64, float64
+[2022-12-30 12:25:28,520] 95 root - INFO - Hypothesis eg_000: float64, float64
+[2022-12-30 12:25:28,555] 155 root - INFO - As all columns available in test df hence detecting data drift
+[2022-12-30 12:25:28,555] 95 root - INFO - Hypothesis class: object, object
+[2022-12-30 12:25:28,630] 95 root - INFO - Hypothesis aa_000: float64, float64
+[2022-12-30 12:25:28,637] 95 root - INFO - Hypothesis ac_000: float64, float64
+[2022-12-30 12:25:28,642] 95 root - INFO - Hypothesis ad_000: float64, float64
+[2022-12-30 12:25:28,647] 95 root - INFO - Hypothesis ae_000: float64, float64
+[2022-12-30 12:25:28,663] 95 root - INFO - Hypothesis af_000: float64, float64
+[2022-12-30 12:25:28,678] 95 root - INFO - Hypothesis ag_000: float64, float64
+[2022-12-30 12:25:28,693] 95 root - INFO - Hypothesis ag_001: float64, float64
+[2022-12-30 12:25:28,708] 95 root - INFO - Hypothesis ag_002: float64, float64
+[2022-12-30 12:25:28,711] 95 root - INFO - Hypothesis ag_003: float64, float64
+[2022-12-30 12:25:28,715] 95 root - INFO - Hypothesis ag_004: float64, float64
+[2022-12-30 12:25:28,722] 95 root - INFO - Hypothesis ag_005: float64, float64
+[2022-12-30 12:25:28,729] 95 root - INFO - Hypothesis ag_006: float64, float64
+[2022-12-30 12:25:28,737] 95 root - INFO - Hypothesis ag_007: float64, float64
+[2022-12-30 12:25:28,743] 95 root - INFO - Hypothesis ag_008: float64, float64
+[2022-12-30 12:25:28,749] 95 root - INFO - Hypothesis ag_009: float64, float64
+[2022-12-30 12:25:28,753] 95 root - INFO - Hypothesis ah_000: float64, float64
+[2022-12-30 12:25:28,760] 95 root - INFO - Hypothesis ai_000: float64, float64
+[2022-12-30 12:25:28,764] 95 root - INFO - Hypothesis aj_000: float64, float64
+[2022-12-30 12:25:28,768] 95 root - INFO - Hypothesis ak_000: float64, float64
+[2022-12-30 12:25:28,784] 95 root - INFO - Hypothesis al_000: float64, float64
+[2022-12-30 12:25:28,789] 95 root - INFO - Hypothesis am_0: float64, float64
+[2022-12-30 12:25:28,794] 95 root - INFO - Hypothesis an_000: float64, float64
+[2022-12-30 12:25:28,801] 95 root - INFO - Hypothesis ao_000: float64, float64
+[2022-12-30 12:25:28,808] 95 root - INFO - Hypothesis ap_000: float64, float64
+[2022-12-30 12:25:28,815] 95 root - INFO - Hypothesis aq_000: float64, float64
+[2022-12-30 12:25:28,822] 95 root - INFO - Hypothesis ar_000: float64, float64
+[2022-12-30 12:25:28,826] 95 root - INFO - Hypothesis as_000: float64, float64
+[2022-12-30 12:25:28,841] 95 root - INFO - Hypothesis at_000: float64, float64
+[2022-12-30 12:25:28,856] 95 root - INFO - Hypothesis au_000: float64, float64
+[2022-12-30 12:25:28,872] 95 root - INFO - Hypothesis av_000: float64, float64
+[2022-12-30 12:25:28,877] 95 root - INFO - Hypothesis ax_000: float64, float64
+[2022-12-30 12:25:28,883] 95 root - INFO - Hypothesis ay_000: float64, float64
+[2022-12-30 12:25:28,898] 95 root - INFO - Hypothesis ay_001: float64, float64
+[2022-12-30 12:25:28,913] 95 root - INFO - Hypothesis ay_002: float64, float64
+[2022-12-30 12:25:28,928] 95 root - INFO - Hypothesis ay_003: float64, float64
+[2022-12-30 12:25:28,942] 95 root - INFO - Hypothesis ay_004: float64, float64
+[2022-12-30 12:25:28,958] 95 root - INFO - Hypothesis ay_005: float64, float64
+[2022-12-30 12:25:28,963] 95 root - INFO - Hypothesis ay_006: float64, float64
+[2022-12-30 12:25:28,969] 95 root - INFO - Hypothesis ay_007: float64, float64
+[2022-12-30 12:25:28,976] 95 root - INFO - Hypothesis ay_008: float64, float64
+[2022-12-30 12:25:28,983] 95 root - INFO - Hypothesis ay_009: float64, float64
+[2022-12-30 12:25:28,998] 95 root - INFO - Hypothesis az_000: float64, float64
+[2022-12-30 12:25:29,005] 95 root - INFO - Hypothesis az_001: float64, float64
+[2022-12-30 12:25:29,012] 95 root - INFO - Hypothesis az_002: float64, float64
+[2022-12-30 12:25:29,018] 95 root - INFO - Hypothesis az_003: float64, float64
+[2022-12-30 12:25:29,025] 95 root - INFO - Hypothesis az_004: float64, float64
+[2022-12-30 12:25:29,033] 95 root - INFO - Hypothesis az_005: float64, float64
+[2022-12-30 12:25:29,040] 95 root - INFO - Hypothesis az_006: float64, float64
+[2022-12-30 12:25:29,047] 95 root - INFO - Hypothesis az_007: float64, float64
+[2022-12-30 12:25:29,051] 95 root - INFO - Hypothesis az_008: float64, float64
+[2022-12-30 12:25:29,055] 95 root - INFO - Hypothesis az_009: float64, float64
+[2022-12-30 12:25:29,070] 95 root - INFO - Hypothesis ba_000: float64, float64
+[2022-12-30 12:25:29,078] 95 root - INFO - Hypothesis ba_001: float64, float64
+[2022-12-30 12:25:29,085] 95 root - INFO - Hypothesis ba_002: float64, float64
+[2022-12-30 12:25:29,093] 95 root - INFO - Hypothesis ba_003: float64, float64
+[2022-12-30 12:25:29,100] 95 root - INFO - Hypothesis ba_004: float64, float64
+[2022-12-30 12:25:29,107] 95 root - INFO - Hypothesis ba_005: float64, float64
+[2022-12-30 12:25:29,114] 95 root - INFO - Hypothesis ba_006: float64, float64
+[2022-12-30 12:25:29,122] 95 root - INFO - Hypothesis ba_007: float64, float64
+[2022-12-30 12:25:29,129] 95 root - INFO - Hypothesis ba_008: float64, float64
+[2022-12-30 12:25:29,135] 95 root - INFO - Hypothesis ba_009: float64, float64
+[2022-12-30 12:25:29,140] 95 root - INFO - Hypothesis bb_000: float64, float64
+[2022-12-30 12:25:29,147] 95 root - INFO - Hypothesis bc_000: float64, float64
+[2022-12-30 12:25:29,154] 95 root - INFO - Hypothesis bd_000: float64, float64
+[2022-12-30 12:25:29,161] 95 root - INFO - Hypothesis be_000: float64, float64
+[2022-12-30 12:25:29,167] 95 root - INFO - Hypothesis bf_000: float64, float64
+[2022-12-30 12:25:29,172] 95 root - INFO - Hypothesis bg_000: float64, float64
+[2022-12-30 12:25:29,179] 95 root - INFO - Hypothesis bh_000: float64, float64
+[2022-12-30 12:25:29,187] 95 root - INFO - Hypothesis bi_000: float64, float64
+[2022-12-30 12:25:29,194] 95 root - INFO - Hypothesis bj_000: float64, float64
+[2022-12-30 12:25:29,201] 95 root - INFO - Hypothesis bk_000: float64, float64
+[2022-12-30 12:25:29,207] 95 root - INFO - Hypothesis bl_000: float64, float64
+[2022-12-30 12:25:29,212] 95 root - INFO - Hypothesis bm_000: float64, float64
+[2022-12-30 12:25:29,217] 95 root - INFO - Hypothesis bs_000: float64, float64
+[2022-12-30 12:25:29,224] 95 root - INFO - Hypothesis bt_000: float64, float64
+[2022-12-30 12:25:29,231] 95 root - INFO - Hypothesis bu_000: float64, float64
+[2022-12-30 12:25:29,238] 95 root - INFO - Hypothesis bv_000: float64, float64
+[2022-12-30 12:25:29,245] 95 root - INFO - Hypothesis bx_000: float64, float64
+[2022-12-30 12:25:29,252] 95 root - INFO - Hypothesis by_000: float64, float64
+[2022-12-30 12:25:29,259] 95 root - INFO - Hypothesis bz_000: float64, float64
+[2022-12-30 12:25:29,265] 95 root - INFO - Hypothesis ca_000: float64, float64
+[2022-12-30 12:25:29,275] 95 root - INFO - Hypothesis cb_000: float64, float64
+[2022-12-30 12:25:29,283] 95 root - INFO - Hypothesis cc_000: float64, float64
+[2022-12-30 12:25:29,290] 95 root - INFO - Hypothesis cd_000: float64, float64
+[2022-12-30 12:25:29,305] 95 root - INFO - Hypothesis ce_000: float64, float64
+[2022-12-30 12:25:29,311] 95 root - INFO - Hypothesis cf_000: float64, float64
+[2022-12-30 12:25:29,315] 95 root - INFO - Hypothesis cg_000: float64, float64
+[2022-12-30 12:25:29,332] 95 root - INFO - Hypothesis ch_000: float64, float64
+[2022-12-30 12:25:29,348] 95 root - INFO - Hypothesis ci_000: float64, float64
+[2022-12-30 12:25:29,355] 95 root - INFO - Hypothesis cj_000: float64, float64
+[2022-12-30 12:25:29,359] 95 root - INFO - Hypothesis ck_000: float64, float64
+[2022-12-30 12:25:29,366] 95 root - INFO - Hypothesis cl_000: float64, float64
+[2022-12-30 12:25:29,370] 95 root - INFO - Hypothesis cm_000: float64, float64
+[2022-12-30 12:25:29,375] 95 root - INFO - Hypothesis cn_000: float64, float64
+[2022-12-30 12:25:29,378] 95 root - INFO - Hypothesis cn_001: float64, float64
+[2022-12-30 12:25:29,382] 95 root - INFO - Hypothesis cn_002: float64, float64
+[2022-12-30 12:25:29,388] 95 root - INFO - Hypothesis cn_003: float64, float64
+[2022-12-30 12:25:29,398] 95 root - INFO - Hypothesis cn_004: float64, float64
+[2022-12-30 12:25:29,408] 95 root - INFO - Hypothesis cn_005: float64, float64
+[2022-12-30 12:25:29,415] 95 root - INFO - Hypothesis cn_006: float64, float64
+[2022-12-30 12:25:29,422] 95 root - INFO - Hypothesis cn_007: float64, float64
+[2022-12-30 12:25:29,429] 95 root - INFO - Hypothesis cn_008: float64, float64
+[2022-12-30 12:25:29,435] 95 root - INFO - Hypothesis cn_009: float64, float64
+[2022-12-30 12:25:29,440] 95 root - INFO - Hypothesis co_000: float64, float64
+[2022-12-30 12:25:29,445] 95 root - INFO - Hypothesis cp_000: float64, float64
+[2022-12-30 12:25:29,450] 95 root - INFO - Hypothesis cq_000: float64, float64
+[2022-12-30 12:25:29,457] 95 root - INFO - Hypothesis cs_000: float64, float64
+[2022-12-30 12:25:29,464] 95 root - INFO - Hypothesis cs_001: float64, float64
+[2022-12-30 12:25:29,470] 95 root - INFO - Hypothesis cs_002: float64, float64
+[2022-12-30 12:25:29,476] 95 root - INFO - Hypothesis cs_003: float64, float64
+[2022-12-30 12:25:29,483] 95 root - INFO - Hypothesis cs_004: float64, float64
+[2022-12-30 12:25:29,490] 95 root - INFO - Hypothesis cs_005: float64, float64
+[2022-12-30 12:25:29,497] 95 root - INFO - Hypothesis cs_006: float64, float64
+[2022-12-30 12:25:29,504] 95 root - INFO - Hypothesis cs_007: float64, float64
+[2022-12-30 12:25:29,511] 95 root - INFO - Hypothesis cs_008: float64, float64
+[2022-12-30 12:25:29,516] 95 root - INFO - Hypothesis cs_009: float64, float64
+[2022-12-30 12:25:29,532] 95 root - INFO - Hypothesis ct_000: float64, float64
+[2022-12-30 12:25:29,537] 95 root - INFO - Hypothesis cu_000: float64, float64
+[2022-12-30 12:25:29,542] 95 root - INFO - Hypothesis cv_000: float64, float64
+[2022-12-30 12:25:29,549] 95 root - INFO - Hypothesis cx_000: float64, float64
+[2022-12-30 12:25:29,555] 95 root - INFO - Hypothesis cy_000: float64, float64
+[2022-12-30 12:25:29,558] 95 root - INFO - Hypothesis cz_000: float64, float64
+[2022-12-30 12:25:29,564] 95 root - INFO - Hypothesis da_000: float64, float64
+[2022-12-30 12:25:29,580] 95 root - INFO - Hypothesis db_000: float64, float64
+[2022-12-30 12:25:29,596] 95 root - INFO - Hypothesis dc_000: float64, float64
+[2022-12-30 12:25:29,602] 95 root - INFO - Hypothesis dd_000: float64, float64
+[2022-12-30 12:25:29,609] 95 root - INFO - Hypothesis de_000: float64, float64
+[2022-12-30 12:25:29,614] 95 root - INFO - Hypothesis df_000: float64, float64
+[2022-12-30 12:25:29,629] 95 root - INFO - Hypothesis dg_000: float64, float64
+[2022-12-30 12:25:29,645] 95 root - INFO - Hypothesis dh_000: float64, float64
+[2022-12-30 12:25:29,660] 95 root - INFO - Hypothesis di_000: float64, float64
+[2022-12-30 12:25:29,664] 95 root - INFO - Hypothesis dj_000: float64, float64
+[2022-12-30 12:25:29,681] 95 root - INFO - Hypothesis dk_000: float64, float64
+[2022-12-30 12:25:29,696] 95 root - INFO - Hypothesis dl_000: float64, float64
+[2022-12-30 12:25:29,712] 95 root - INFO - Hypothesis dm_000: float64, float64
+[2022-12-30 12:25:29,729] 95 root - INFO - Hypothesis dn_000: float64, float64
+[2022-12-30 12:25:29,736] 95 root - INFO - Hypothesis do_000: float64, float64
+[2022-12-30 12:25:29,743] 95 root - INFO - Hypothesis dp_000: float64, float64
+[2022-12-30 12:25:29,749] 95 root - INFO - Hypothesis dq_000: float64, float64
+[2022-12-30 12:25:29,766] 95 root - INFO - Hypothesis dr_000: float64, float64
+[2022-12-30 12:25:29,770] 95 root - INFO - Hypothesis ds_000: float64, float64
+[2022-12-30 12:25:29,777] 95 root - INFO - Hypothesis dt_000: float64, float64
+[2022-12-30 12:25:29,784] 95 root - INFO - Hypothesis du_000: float64, float64
+[2022-12-30 12:25:29,791] 95 root - INFO - Hypothesis dv_000: float64, float64
+[2022-12-30 12:25:29,798] 95 root - INFO - Hypothesis dx_000: float64, float64
+[2022-12-30 12:25:29,804] 95 root - INFO - Hypothesis dy_000: float64, float64
+[2022-12-30 12:25:29,808] 95 root - INFO - Hypothesis dz_000: float64, float64
+[2022-12-30 12:25:29,823] 95 root - INFO - Hypothesis ea_000: float64, float64
+[2022-12-30 12:25:29,838] 95 root - INFO - Hypothesis eb_000: float64, float64
+[2022-12-30 12:25:29,844] 95 root - INFO - Hypothesis ec_00: float64, float64
+[2022-12-30 12:25:29,851] 95 root - INFO - Hypothesis ed_000: float64, float64
+[2022-12-30 12:25:29,857] 95 root - INFO - Hypothesis ee_000: float64, float64
+[2022-12-30 12:25:29,864] 95 root - INFO - Hypothesis ee_001: float64, float64
+[2022-12-30 12:25:29,871] 95 root - INFO - Hypothesis ee_002: float64, float64
+[2022-12-30 12:25:29,878] 95 root - INFO - Hypothesis ee_003: float64, float64
+[2022-12-30 12:25:29,885] 95 root - INFO - Hypothesis ee_004: float64, float64
+[2022-12-30 12:25:29,892] 95 root - INFO - Hypothesis ee_005: float64, float64
+[2022-12-30 12:25:29,899] 95 root - INFO - Hypothesis ee_006: float64, float64
+[2022-12-30 12:25:29,906] 95 root - INFO - Hypothesis ee_007: float64, float64
+[2022-12-30 12:25:29,912] 95 root - INFO - Hypothesis ee_008: float64, float64
+[2022-12-30 12:25:29,918] 95 root - INFO - Hypothesis ee_009: float64, float64
+[2022-12-30 12:25:29,923] 95 root - INFO - Hypothesis ef_000: float64, float64
+[2022-12-30 12:25:29,938] 95 root - INFO - Hypothesis eg_000: float64, float64
+[2022-12-30 12:25:29,953] 159 root - INFO - Write report in yaml file
+[2022-12-30 12:25:30,027] 39 root - INFO - the report is succefully dumped in given path:/config/workspace/artifact/12-30-22__12:24:59/data_validation/report.yaml
